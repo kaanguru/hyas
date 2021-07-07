@@ -5,11 +5,11 @@
         <img src="/images/logo.png" alt="{{ .Site.Title }} Logo" class="img-fluid"/>
       </a>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
      {{ $currentPage := . }}
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="primary-menu">
       <ul class="navbar-nav ">
         {{ range site.Menus.main }}
         {{ if .HasChildren }}
