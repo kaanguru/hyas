@@ -1,9 +1,13 @@
 #navbar {
   background-color: $white;
+  padding: 0rem 1.5rem;
 }
 #logo {
   display: flex;
   margin-right: auto;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 #primary-menu {
   // max-width: 100%;
@@ -20,10 +24,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
-}
-
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   #navbar {
     background-color: transparent;
   }
@@ -32,6 +33,10 @@
     flex-grow: 0;
     .nav-item:not(:first-child) {
       border-top: none;
+    }
+    .nav-link {
+      padding: 29px 15px;
+      letter-spacing: 2px;
     }
   }
 }
