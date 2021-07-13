@@ -1,5 +1,4 @@
 {{ define "main" }}
   {{ partial "slider" . }}
-  <p class="text-center">{{ .Params.Lead | safeHTML }}</p>
   <section>{{- .Content -}}</section>
 {{ end }}

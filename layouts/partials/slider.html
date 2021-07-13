@@ -2,15 +2,17 @@
 
 <div class="swiper-container" >
   <div class="swiper-wrapper">
+    {{ range $.Site.Data.slides.slide }}
     <div class="swiper-slide">
-      <img src="/images/slider/1.jpg" alt="">
+      <img class="animate__animated animate__fadeIn" src="{{ .image }}" alt="">
+        <div class="position-absolute">
+          <h2 class="animate__animated animate__fadeInDown">{{ .lead | safeHTML }}</h2>
+          <p class="fw-light d-none d-lg-block animate__animated animate__fadeIn">{{ .sub | safeHTML }}</p>
+          <a href="#" class="btn btn-info animate__animated animate__fadeInUp">Başla</a>
+        </div>
     </div>
-    <div class="swiper-slide">
-      <img src="/images/slider/2.jpg" alt="">
-    </div>
-    <div class="swiper-slide">
-      <img src="/images/slider/3.jpg" alt="">
-    </div>
+    {{ end }}
+
 
   </div>
   <div class="swiper-button-next"><i class="icon-line-arrow-left"></i></div>
