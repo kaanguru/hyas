@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ partial "footer/esbuild" (dict "src" "js/bootstrap.js" "load" "async" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/app.js" "targetPath" "main.js" "load" "async" "transpile" false) -}}
 
@@ -12,3 +13,25 @@
   {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
 {{ end }}
 */}}
+=======
+{{ $lazysizes := resources.Get "js/vendor/lazysizes/lazysizes.min.js" -}}
+{{ $bootstrap := resources.Get "js/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" -}}
+{{ if eq (hugo.Environment) "development" -}}
+{{ $app := resources.Get "js/app.js" | babel -}} 
+{{ $js := slice $lazysizes $bootstrap $app | resources.Concat "main.js" -}}
+<script src="{{ $js.Permalink }}" defer></script>
+
+{{ else -}}
+{{ $instantPage := resources.Get "js/vendor/instant.page/instantpage.js" | minify -}} 
+{{ $app := resources.Get "js/app.js" | babel | minify -}} 
+{{ $js := slice $lazysizes $instantPage $bootstrap $app | resources.Concat "main.js" -}}
+{{ $secureJS := $js | resources.Fingerprint "sha512" -}}
+
+<script
+  src="{{ $secureJS.Permalink }}"
+  integrity="{{ $secureJS.Data.Integrity }}"
+  crossorigin="anonymous"
+  defer
+></script>
+{{ end -}}
+>>>>>>> d82e82fafedf99ca2ec7e1dee7a6dc6801a0137e

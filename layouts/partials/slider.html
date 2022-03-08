@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/vendor/swiper-bundle.min.css" />
+
+<div class="swiper-container" >
+  <div class="swiper-wrapper">
+    {{ range $.Site.Data.slides.slide }}
+    <div class="swiper-slide">
+      <img class="animate__animated animate__fadeIn" src="{{ .image }}" alt="">
+        <div class="position-absolute">
+          <h2 class="animate__animated animate__fadeInDown">{{ .lead | safeHTML }}</h2>
+          <p class="fw-light d-none d-lg-block animate__animated animate__fadeIn">{{ .sub | safeHTML }}</p>
+          <a href="#" class="btn btn-info animate__animated animate__fadeInUp">Başla</a>
+        </div>
+    </div>
+    {{ end }}
+
+
+  </div>
+  <div class="swiper-button-next"><i class="icon-line-arrow-left"></i></div>
+  <div class="swiper-button-prev"></div>
+  <a href="#" data-scrollto="#content" data-offset="0" class="one-page-arrow"><img class="animate__infinite animate__animated  animate__fadeInDown" src="/images/mouse.svg" alt="Image"  height="32" width="32"/></a>
+</div>
+
+<script src="/js/vendor/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper-container", {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+</script>

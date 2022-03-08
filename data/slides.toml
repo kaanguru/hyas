@@ -1,0 +1,12 @@
+[[slide]]
+image = "/images/slider/1.jpg"
+lead = "Anlaşma"
+sub = "Anlaşılır"
+[[slide]]
+image = "/images/slider/2.jpg"
+lead = "İş"
+sub = "İş yapılır"
+[[slide]]
+image = "/images/slider/3.jpg"
+lead = "Dayanışma"
+sub = "Dayanışma içindeyiz"

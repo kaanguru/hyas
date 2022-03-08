@@ -1,28 +1,42 @@
-.banner .nav li {
-  @extend .nav-item;
+#navbar {
+  background-color: $white;
+  padding: 0rem 1.5rem;
 }
-
-.banner .nav a {
-  @extend .nav-link;
+#logo {
+  display: flex;
+  margin-right: auto;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-
-.navbar-text {
+#primary-menu {
+  // max-width: 100%;
   margin-left: 1rem;
-}
-
-@include media-breakpoint-down(sm) {
-  .navbar .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  .nav-item:not(:first-child) {
+    border-top: 1px solid #eee;
+    border-top-color: rgb(238, 238, 238);
+  }
+  .nav-link {
+    display: block;
+    line-height: 22px;
+    padding: 14px 5px;
+    letter-spacing: 1px;
   }
 }
 
-@include media-breakpoint-up(md) {
-  .navbar-brand {
-    font-size: $font-size-xl;
+@include media-breakpoint-up(lg) {
+  #navbar {
+    background-color: transparent;
   }
-
-  .navbar-text {
-    margin-left: 1.25rem;
+  #primary-menu {
+    flex: 0 0 auto;
+    flex-grow: 0;
+    .nav-item:not(:first-child) {
+      border-top: none;
+    }
+    .nav-link {
+      padding: 29px 15px;
+      letter-spacing: 2px;
+    }
   }
 }

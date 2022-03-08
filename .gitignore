@@ -2,4 +2,9 @@ node_modules
 public
 resources
 .netlify
+<<<<<<< HEAD
 .hugo_build.lock
+=======
+TODO
+yarn.lock
+>>>>>>> d82e82fafedf99ca2ec7e1dee7a6dc6801a0137e
