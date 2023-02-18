@@ -7,7 +7,7 @@ https://gethyas.com/docs/prologue/introduction/
 
 https://gohugo.io/getting-started/quick-start/
 
-<<<<<<< HEAD
+
 <p align="center">
   <a href="https://github.com/h-enk/hyas/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/h-enk/hyas?style=flat-square" alt="GitHub">
@@ -66,11 +66,10 @@ Start a new Hyas project in three steps:
 
 ```bash
 git clone https://github.com/h-enk/hyas.git my-hyas-site && cd my-hyas-site
-=======
-```
 $ yarn start
->>>>>>> d82e82fafedf99ca2ec7e1dee7a6dc6801a0137e
+
 ```
+
 
 ## Contact
 
@@ -82,7 +81,6 @@ $ yarn start
 ![Donate LiteCoin](https://raw.githubusercontent.com/scottycc/coinwidget.com/master/icon_litecoin.png)
 **LiteCoin Address For Donation:** LaF4Kjh7MYh7yYBjBX2CEPjGhZ614ffMh8
 
-<<<<<<< HEAD
 ## Other commands
 
 Hyas comes with [commands](https://gethyas.com/docs/prologue/commands/) for common tasks.
@@ -111,5 +109,3 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 Support this project by becoming a backer. Your avatar will show up here.
 
 [![Backers](https://opencollective.com/hyas/tiers/backer.svg)](https://opencollective.com/hyas)
-=======
->>>>>>> d82e82fafedf99ca2ec7e1dee7a6dc6801a0137e
